@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOP - The Print People</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: linear-gradient(45deg, cyan, magenta, yellow, black);
+            color: white;
+        }
+        header {
+            background: black;
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+        }
+        .tagline {
+            font-style: italic;
+        }
+        .sidebar {
+            position: fixed;
+            left: -200px;
+            top: 0;
+            width: 200px;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            padding-top: 60px;
+            transition: 0.5s;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+        .sidebar:hover {
+            left: 0;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            padding: 15px;
+            text-align: left;
+        }
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .hero {
+            background: linear-gradient(to right, cyan, magenta);
+            padding: 50px;
+            animation: fadeIn 2s ease-in-out;
+            border-radius: 15px;
+        }
+        .service {
+            margin: 20px;
+            padding: 10px;
+            border: 2px solid yellow;
+            background: rgba(255, 255, 255, 0.2);
+            display: inline-block;
+            width: 30%;
+            border-radius: 15px;
+        }
+        footer {
+            background: black;
+            color: white;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            border-radius: 15px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>VOP</h1>
+        <p class="tagline">The Print People</p>
+    </header>
+    
+    <div class="sidebar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#order">Order</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+    
+    <section id="home" class="hero">
+        <h2>High-Quality Printing & Designing Services</h2>
+        <p>Your trusted partner for all printing needs.</p>
+        <button onclick="scrollToSection('contact')">Get in Touch</button>
+    </section>
+    
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service">
+            <h3>Offset Printing</h3>
+            <p>High-quality offset printing for brochures, business cards, and more.</p>
+        </div>
+        <div class="service">
+            <h3>Graphic Designing</h3>
+            <p>Custom designs for branding and promotional materials.</p>
+        </div>
+        <div class="service">
+            <h3>Packaging & Labels</h3>
+            <p>Professional labels and packaging solutions.</p>
+        </div>
+    </section>
+    
+    <section id="order">
+        <h2>Place Your Order</h2>
+        <p>Fill out the form to get started with your printing needs.</p>
+        <button onclick="alert('Order functionality coming soon!')">Order Now</button>
+    </section>
+    
+    <section id="about">
+        <h2>About Us</h2>
+        <p>VOP (Vikrant Offset Printers) has been delivering top-notch printing services for businesses and individuals. Our team is dedicated to quality and customer satisfaction.</p>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: vikrantoffsetprinters@yahoo.com</p>
+        <p>Phone: +91-9448146417</p>
+        <p>Address: 7th Cross, Hindiwadi, Belgaum, Karnataka, India</p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 VOP - The Print People. All Rights Reserved.</p>
+    </footer>
+    
+    <script>
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
